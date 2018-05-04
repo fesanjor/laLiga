@@ -1,0 +1,15 @@
+
+<section class="ae-container-fluid ae-container-fluid--inner rk-portfolio animated fadeIn">
+  <div *ngIf="_ps.equipos.length > 0 && !_ps.cargando"
+       class="ae-masonry ae-masonry-md-2 ae-masonry-xl-4 animated fadeIn">
+    <a *ngFor="let equipo of _ps.equipos"
+       [routerLink]="['/equipo', equipo.codigo]"
+       class="rk-item ae-masonry__item">
+      <img src="assets/equipos/{{equipo.url}}" alt="">
+      <div class="item-meta">
+        <h2>{{equipo.titulo}}</h2>
+        <p>{{equipo.categoria}}</p>
+      </div>
+    </a>
+  </div>
+</section>
